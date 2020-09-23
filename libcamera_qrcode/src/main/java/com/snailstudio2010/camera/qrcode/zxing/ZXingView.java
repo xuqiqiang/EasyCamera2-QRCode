@@ -27,7 +27,7 @@ import com.snailstudio2010.camera2.ui.ContainerView;
 
 import java.util.Map;
 
-public class ZXingView {//extends QRCodeView {
+public class ZXingView {
     private static ValueAnimator mAutoZoomAnimator;
     protected BarcodeType mBarcodeType = BarcodeType.HIGH_FREQUENCY;
     private Context mContext;
@@ -38,13 +38,6 @@ public class ZXingView {//extends QRCodeView {
     private ZoomListener mZoomListener;
     private QRCodeListener mQRCodeListener;
 
-    //    public ZXingView(Context context, AttributeSet attributeSet) {
-//        this(context, attributeSet, 0);
-//    }
-//
-//    public ZXingView(Context context, AttributeSet attrs, int defStyleAttr) {
-//        super(context, attrs, defStyleAttr);
-//    }
     private long mLastAutoZoomTime = 0;
 
     public ZXingView(Context context, Size size, ContainerView container, ZoomListener zoomListener, ZXingView.QRCodeListener listener) {

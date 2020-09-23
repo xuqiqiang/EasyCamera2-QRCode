@@ -20,31 +20,11 @@ public class ProcessDataTask extends AsyncTask<Void, Void, ScanResult> {
     // 亮度低的阀值
     private static final int AMBIENT_BRIGHTNESS_DARK = 60;
     private static long sLastStartTime = 0;
-//    private Context mContext;
+
     private Size mSize;
     private byte[] mData;
     private boolean mIsPortrait;
-//    private String mPicturePath;
 
-    //    private QRCodeView mQRCodeView;
-//    private Bitmap mBitmap;
-
-    //    ProcessDataTask(Camera camera, byte[] data, QRCodeView qrCodeView, boolean isPortrait) {
-//        mCamera = camera;
-//        mData = data;
-//        mQRCodeViewRef = new WeakReference<>(qrCodeView);
-//        mIsPortrait = isPortrait;
-//    }
-//
-//    ProcessDataTask(String picturePath, QRCodeView qrCodeView) {
-//        mPicturePath = picturePath;
-//        mQRCodeViewRef = new WeakReference<>(qrCodeView);
-//    }
-//
-//    ProcessDataTask(Bitmap bitmap, QRCodeView qrCodeView) {
-//        mBitmap = bitmap;
-//        mQRCodeViewRef = new WeakReference<>(qrCodeView);
-//    }
     private WeakReference<ZXingView> mQRCodeViewRef;
     private ZXingView.QRCodeListener mQRCodeListener;
     // 上次环境亮度记录的时间戳
@@ -54,7 +34,6 @@ public class ProcessDataTask extends AsyncTask<Void, Void, ScanResult> {
 
     public ProcessDataTask(Context context, ContainerView container, Size size, byte[] data,
                            ZXingView.ZoomListener zoomListener, ZXingView.QRCodeListener listener) {
-//        mContext = context;
         mSize = size;
         mData = data;
         mQRCodeViewRef = new WeakReference<>(

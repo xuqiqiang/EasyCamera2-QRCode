@@ -19,7 +19,7 @@ allprojects {
 }
 
 dependencies {
-	implementation 'com.github.xuqiqiang:EasyCamera2-QRCode:1.0.0'
+	implementation 'com.github.xuqiqiang:EasyCamera2-QRCode:1.0.2'
 }
 ```
 
